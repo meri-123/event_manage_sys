@@ -1,0 +1,15 @@
+  <p>
+    <strong>Commenter_name:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Your_Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+        <%= link_to "Destroy Comment", [comment.management, comment], data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+  </p>

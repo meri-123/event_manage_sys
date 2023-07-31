@@ -1,0 +1,52 @@
+<h1>New Entry</h1>
+<%= render "form", management: @management %>
+
+<%
+=begin%>
+
+<%= form_with model: @m do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @m.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+    <% @m.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :contact %><br>
+    <%= form.text_area :contact %>
+    <% @m.errors.full_messages_for(:contact).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :meeting_date %><br>
+    <%= form.date_field :meeting_date %>
+  </div>
+
+  <div>
+    <%= form.label :start_time %><br>
+    <%= form.time_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time %><br>
+    <%= form.time_field :end_time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<%
+=end%>

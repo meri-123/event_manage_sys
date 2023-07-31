@@ -1,0 +1,14 @@
+<h1>WELCOME</h1>
+<p>it's Merina</p>
+
+<h1>MANAGEMENT</h1>
+
+<ul>
+  <% @managements.each do |i| %>
+    <li>
+      <%= link_to i.name, i %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New user", new_management_path %>

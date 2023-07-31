@@ -1,0 +1,46 @@
+<h1>FORM PAGE</h1>
+
+<%= form_with model: @management do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @management.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+    <% @management.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :contact %><br>
+    <%= form.text_area :contact %>
+    <% @management.errors.full_messages_for(:contact).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :meeting_date %><br>
+    <%= form.date_field :meeting_date %>
+  </div>
+
+  <div>
+    <%= form.label :start_time %><br>
+    <%= form.time_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time %><br>
+    <%= form.time_field :end_time %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

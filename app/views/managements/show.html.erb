@@ -1,0 +1,24 @@
+<h1><%= @management.name %></h1>
+<p><%= @management.email %></p>
+<h1><%= @management.contact %></h1>
+<h1><%= @management.meeting_date %></h1>
+<h1><%= @management.start_time %></h1>
+<h1><%= @management.end_time %></h1>
+
+<ul>
+  <li><%= link_to "Edit", edit_management_path(@management) %></li>
+  <li><%= link_to "Destroy", management_path(@management), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+<br>
+<br>
+
+<h2>FEEDBACKS</h2>
+
+
+<%= render @management.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
