@@ -1,3 +1,16 @@
+<style>
+body{
+  background: LightSteelBlue;
+}
+</style>
+
+<h2>
+<% if @management.image.attached? %>
+  <%= image_tag @management.image, style:"width:150px;height:150px;"%><br>
+  <%= link_to 'Download', @management.image, download: ''%>
+<%end%>
+
+
 <h1><%= @management.name %></h1>
 <p><%= @management.email %></p>
 <h1><%= @management.contact %></h1>
@@ -6,20 +19,17 @@
 <h1><%= @management.end_time %></h1>
 
 <ul>
-  <li><%= link_to "Edit", edit_management_path(@management) %></li>
+  <li><%= link_to "Edit", edit_management_path(@management) %></li><br>
   <li><%= link_to "Destroy", management_path(@management), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>
+  
 </ul>
 <br>
-<br>
 
-<h2>FEEDBACKS</h2>
-
-
+<h2>Instractions</h2>
 <%= render @management.comments %>
-
-<h2>Add a comment:</h2>
+<h2>Add Instruction:</h2>
 <%= render 'comments/form' %>
 <p>hello rails</p>

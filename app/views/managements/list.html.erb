@@ -1,0 +1,15 @@
+<style>
+body{
+  background: FloralWhite;
+}
+</style>
+
+<h3>Show Details<h3>
+
+<ul>
+<% @managements.each do |i| %>
+<li>
+<%= link_to i.name, i %>
+</li>
+<% end %>
+</ul>

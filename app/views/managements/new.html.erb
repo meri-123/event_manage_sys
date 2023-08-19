@@ -1,10 +1,19 @@
+<style>
+body{
+  background: LightGrey;
+}
+</style>
+
 <h1>New Entry</h1>
-<%= render "form", management: @management %>
+
+
+<%= render "form", management: @management %>  
+
 
 <%
 =begin%>
 
-<%= form_with model: @m do |form| %>
+ <%= form_with model: @m do |form| %>
   <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -48,5 +57,6 @@
     <%= form.submit %>
   </div>
 <% end %>
+
 <%
 =end%>
