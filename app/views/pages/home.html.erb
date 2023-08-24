@@ -1,21 +1,24 @@
 <style>
 body{
-  background: BurlyWood;
+  background: rgb(252, 223, 179);
 }
 </style>
 
-<h1>Pages#home</h1>
 <h1>Admin login</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p>Pages#home</p>
 <% if current_adminn %>
 <p>Hello <%= current_adminn.email%>!</p>
+<p>Logged in: <%= current_adminn.roles.last.name%>!</p>
+
 <p>
 Successfully authenticated.<br>
 Now ready to interact with this application.
 </p>
 <%= link_to "Book now", new_management_path %>
 <br> 
-<%= link_to "All Details" , managements_list_path%><br>
+<% if current_adminn %>
+  <%= link_to "All Details" , managements_list_path%><br>
+<%end%>
 <%# <%= link_to "show details" , pages_see_path%>  
 <%= link_to "Sign out", destroy_adminn_session_path,'data-turbo-method': :delete%>
 <%else%>

@@ -1,0 +1,19 @@
+h1{
+  background: rgb(73, 183, 156);
+}
+h2{
+  background: rgb(104, 145, 175);
+}
+/* body{
+  background: rgb(252, 223, 179);
+} */
+.button {
+  background-color: #8de1a4ba; 
+ color: rgba(135, 218, 135, 0.803);
+ /* float: right; */
+ position:absolute; left:150px; top:200px;
+ /* padding: 10px; */
+ border-radius: 5px;
+ /* -moz-border-radius: 10px;
+ -webkit-border-radius: 10px; */
+}

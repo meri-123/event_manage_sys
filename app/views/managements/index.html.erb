@@ -1,14 +1,125 @@
 <style>
-body{
+ /* body{
   background: BlanchedAlmond;
+}  */
+body{
+  background: rgb(252, 223, 179);
 }
+
 </style>
 
-<h1>WELCOME TO EVENT MANAGER</h1>
-<h1></h1>
-<p>it's MANAGEMENT index page</p>
+<style>
+.gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 1rem 0;
+ } 
+ .card{
+    width: 15rem;
+    height: 15rem;
+    box-shadow: 0 0 5px rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 0.5rem;
+ }
+  .card:hover{
+    transform: scale(1.009);
+    cursor: pointer;
+ } 
+     .imgs{
+    background: rgb(219, 218, 218);
+    height: 60%;
+    border-radius: 5px;
+ }
+ img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+ }
+ p{
+    padding: 0.5rem 0.5rem;
+    font-weight: 300;
+ }
+ /* .custom-button {
+background-color: #4CAF50;
+color: LavenderBlush;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}  */
+</style>
+
+<h1 style="text-align:center"> WELCOME TO 𝓔𝓥 𝓜𝓪𝓷𝓪𝓰𝓮𝓻</h1><br> 
+<%# <% <p style = "font-family:Georgia Italic">It ia MANAGEMENT index page </p> %>
 
 
+<p style="text-align:center;color:Grey;font-size:30px;">Are you planning an unforgettable wedding?
+<br>
+or, a surprise Birthday Party?
+<br>
+or, a lovely Anniversary?
+<br>
+or, adorable Baby Shower Party?
+<br>
+or, overjoyed Engagement Party?
+</p>
+
+  <div class="dash"></div>
+</div>
+<div class="gallery">
+ <div class="card">
+    <div class="imgs">
+       <img src="https://housing.com/news/wp-content/uploads/2023/02/shutterstock_1193416354.jpg" alt="">
+    </div>
+    <h5 class="card-title">Wedding </h5>
+    <p style="text-align:left;color:rgb(80, 138, 75);font-size:13px;font-weight: 400;">Celebrate based on your cultural, religious, and personal preferences</p>
+ </div>
+
+ <div class="card">
+    <div class="imgs">
+       <img src="https://1.bp.blogspot.com/-Z4wBD0ECqNM/WIh1qy6CeuI/AAAAAAAACGU/TUJ3YsjCCoUlyIGJH9pDwaApQYL3evsIACLcB/s1600/Happy-birthday-photos-pictures-HD.jpg" alt="">
+    </div>
+    <h5 class="card-title">Birthday </h5>
+    <p style="text-align:left;color:rgb(80, 138, 75);font-size:13px;font-weight: 400;"> Celebrate your life & existence</p>
+     <%# <div class="button">
+      <%=link_to "Book now", new_management_path, class:"btn btn-info btn-sm"%>
+ </div>
+
+ <div class="card">
+    <div class="imgs">
+       <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1YsJfFHmx0tIM-mjyWo4zXcreYTvIYxhzgg4R1ppiUFGdX_p3L1K7N0lcYNdHpaa-gVo&usqp=CAU">
+    </div>
+    <h5 class="card-title"> Anniversary</h5>
+    <p style="text-align:left;color:rgb(80, 138, 75);font-size:13px;font-weight: 400;">celebrate your relationship or journey or memories</p>
+    <%# <div class="button">
+      <%=link_to "Book now", new_management_path, class:"btn btn-info btn-sm"%>
+      
+  </div>
+
+ <div class="card">
+    <div class="imgs">
+       <img src="https://static.vecteezy.com/system/resources/previews/003/125/765/original/baby-shower-card-with-baby-boy-and-decoration-free-vector.jpg" alt="">
+    </div>
+    <h5 class="card-title">Baby Showers</h5>
+    <p style="text-align:left;color:rgb(80, 138, 75);font-size:13px;font-weight: 400;">Gather blessings for your baby</p>
+ </div>
+
+ <div class="card">
+    <div class="imgs">
+       <img src="https://i1.wp.com/dekhnews.com/wp-content/uploads/2015/09/Happy-Wedding-Anniversary-hd-wallpapers.jpg" alt="">
+    </div>
+    <h5 class="card-title">Engagement</h5>
+    <p style="text-align:left;color:rgb(80, 138, 75);font-size:13px;font-weight: 400;">Celebrate your forever promises and get warm start</p>
+    <%# <a href="#" class="btn btn-info">book now</a> %>
+ </div>
+
+
+<%# <div class="button">
+      <%=link_to "Want to Book ?", new_management_path, class:"btn btn-info btn-sm"%>
+      
 <%# <%= link_to "Want to Book ?" %>
 
 

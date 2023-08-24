@@ -1,6 +1,6 @@
 <style>
 body{
-  background: LightSteelBlue;
+  background: rgb(252, 223, 179);
 }
 </style>
 
@@ -11,12 +11,12 @@ body{
 <%end%>
 
 
-<h1><%= @management.name %></h1>
+<p><%= @management.name %></p>
 <p><%= @management.email %></p>
-<h1><%= @management.contact %></h1>
-<h1><%= @management.meeting_date %></h1>
-<h1><%= @management.start_time %></h1>
-<h1><%= @management.end_time %></h1>
+<p><%= @management.contact %></p>
+<p><%= @management.meeting_date %></p>
+<p><%= @management.start_time %></p>
+<p><%= @management.end_time %></p>
 
 <ul>
   <li><%= link_to "Edit", edit_management_path(@management) %></li><br>

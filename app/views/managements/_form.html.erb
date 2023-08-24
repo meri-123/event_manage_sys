@@ -1,14 +1,13 @@
-<h1>FORM PAGE</h1>
+<h2 style="text-align:center">FORM PAGE</h2>
 
 <%= form_with model: @management do |form| %>
-  <div>
+  <div style="text-align:center">
     <%= form.label :image %><br>
     <%= form.file_field :image %>
   </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :name %><br>
-    
     <%= form.text_area :name %><br>
     <% @management.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
@@ -16,7 +15,7 @@
   </div>
   </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :email %><br>
     <%= form.text_area :email %><br>
     <% @management.errors.full_messages_for(:email).each do |message| %>
@@ -24,7 +23,7 @@
     <% end %>
   </div>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :contact %><br>
     <%= form.text_area :contact %>
     <% @management.errors.full_messages_for(:contact).each do |message| %>
@@ -32,24 +31,23 @@
     <% end %>
   </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :meeting_date %><br>
     <%= form.date_field :meeting_date %>
   </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :start_time %><br>
     <%= form.time_field :start_time %>
   </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :end_time %><br>
     <%= form.time_field :end_time %>
   </div><br>
 
-  <%# <div>
-    <%= form.submit "Done" %>
-  <div>
-    <%= form.submit "Done" , type:"button" ,class:"btn btn-secondary"%>
+   <div style="text-align:center">
+    <%= form.submit "Done" %> 
   </div>
+  
 <% end %>
