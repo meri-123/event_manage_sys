@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
         end
 
         def destroy
-            @management = Management.find(params[:article_id])
+            @management = Management.find(params[:management_id])
             @comment = @management.comments.find(params[:id])
             @comment.destroy
             redirect_to management_path(@management), status: :see_other

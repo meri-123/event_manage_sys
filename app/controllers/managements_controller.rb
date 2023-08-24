@@ -1,13 +1,21 @@
 class ManagementsController < ApplicationController
   def index
-    @managements = Management.all
+    
   end
+
+  def list
+    @q = Management.ransack(params[:q])
+    @managements = @q.result(distinct: true)
+  end
+
   def show
     @management = Management.find(params[:id])
   end
+
   def new
     @management = Management.new
   end
+
   def create
     @management = Management.new(x_params)
 
@@ -17,6 +25,7 @@ class ManagementsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
   def edit
     @management = Management.find(params[:id])
   end
@@ -37,8 +46,9 @@ class ManagementsController < ApplicationController
 
     redirect_to root_path, status: :see_other
   end
+
   private
     def x_params
-      params.require(:management).permit(:name, :email, :contact, :meeting_date, :start_time, :end_time)
+      params.require(:management).permit(:name, :email, :contact, :meeting_date, :start_time, :end_time, :image)
     end
 end

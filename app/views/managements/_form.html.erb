@@ -1,46 +1,53 @@
-<h1>FORM PAGE</h1>
+<h2 style="text-align:center">FORM PAGE</h2>
 
 <%= form_with model: @management do |form| %>
-  <div>
+  <div style="text-align:center">
+    <%= form.label :image %><br>
+    <%= form.file_field :image %>
+  </div><br>
+
+  <div style="text-align:center">
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_area :name %><br>
     <% @management.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
+  </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :email %><br>
-    <%= form.text_area :email %>
+    <%= form.text_area :email %><br>
     <% @management.errors.full_messages_for(:email).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :contact %><br>
     <%= form.text_area :contact %>
     <% @management.errors.full_messages_for(:contact).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
+  </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :meeting_date %><br>
     <%= form.date_field :meeting_date %>
-  </div>
+  </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :start_time %><br>
     <%= form.time_field :start_time %>
-  </div>
+  </div><br>
 
-  <div>
+  <div style="text-align:center">
     <%= form.label :end_time %><br>
     <%= form.time_field :end_time %>
-  </div>
+  </div><br>
 
-  <div>
-    <%= form.submit %>
+   <div style="text-align:center">
+    <%= form.submit "Done" %> 
   </div>
+  
 <% end %>
